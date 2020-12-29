@@ -12,7 +12,9 @@
                 background-color: #97999b;
                 color: #222222;
                 font-family: Arial, Helvetica, sans-serif;
-                font-size:calc(16px + (18 - 16) * ((100vw - 320px) / (1600 - 320)));
+                font-size: calc(
+                    16px + (18 - 16) * ((100vw - 320px) / (1600 - 320))
+                );
             }
             .w {
                 display: grid;
@@ -30,14 +32,19 @@
                 align-items: center;
                 display: grid;
                 justify-content: center;
-                color:#f1f1f1;
+                color: #f1f1f1;
             }
         </style>
     </head>
     <body>
         <div class="w">
             <div class="l">A place where make useful apps.</div>
-            <div class="r">iMega&nbsp;&copy;&nbsp;2005-2021</div>
+            <div class="r">
+                iMega&nbsp;&copy;&nbsp;2005-
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+            </div>
         </div>
     </body>
 </html>
