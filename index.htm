@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>iMega - homepage</title>
         <style>
             * {
@@ -16,17 +18,24 @@
                     16px + (18 - 16) * ((100vw - 320px) / (1600 - 320))
                 );
             }
-            .w {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                width: 100vw;
-                height: 100vh;
+            @media screen and (min-width: 480px) {
+                .w {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    width: 100vw;
+                    height: 100vh;
+                }
             }
             .l {
                 background-color: #f5df4d;
                 align-items: center;
                 display: grid;
                 justify-content: center;
+            }
+            @media screen and (max-width: 480px) {
+                .l {
+                    height: 50vh;
+                }
             }
             .r {
                 align-items: center;
@@ -39,12 +48,12 @@
     <body>
         <div class="w">
             <div class="l">A place where make useful apps.</div>
-            <div class="r">
-                iMega&nbsp;&copy;&nbsp;2005&nbsp;-
-            </div>
+            <div class="r">iMega&nbsp;&copy;&nbsp;2005&nbsp;-&nbsp;</div>
         </div>
         <script>
-            document.querySelector('.r').appendChild(document.createTextNode(new Date().getFullYear()));
+            document
+                .querySelector(".r")
+                .appendChild(document.createTextNode(new Date().getFullYear()));
         </script>
     </body>
 </html>
