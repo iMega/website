@@ -41,10 +41,10 @@
             <div class="l">A place where make useful apps.</div>
             <div class="r">
                 iMega&nbsp;&copy;&nbsp;2005&nbsp;-
-                <script>
-                    document.write(new Date().getFullYear());
-                </script>
             </div>
         </div>
+        <script>
+            document.querySelector('.r').appendChild(document.createTextNode(new Date().getFullYear()));
+        </script>
     </body>
 </html>
